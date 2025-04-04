@@ -51,6 +51,7 @@ Este projeto apresenta o desenvolvimento de um robô móvel de duas rodas, basea
 
 ## Algoritmo de exemplo
 
+https://github.com/ProfMarcoVinchi/robo-balao/tree/8dbb149ecda934ffb16610e689135a11044788f7/Demonstracao_ESP32_BTSerial_v0
 
 
 ## 🛠️ Funcionamento
