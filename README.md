@@ -39,59 +39,18 @@ Este projeto apresenta o desenvolvimento de um robô móvel de duas rodas, basea
   </figcaption>
 </figure>
 
-## 📱 Aplicativo de Controle: Bluetooth Electronics
+## Identificação dos pinos da placa microcontrolada ESP32-WROOM32
 
-Para controlar o robô móvel via Bluetooth, recomenda-se o uso do aplicativo Bluetooth Electronics, disponível gratuitamente na Play Store. O aplicativo permite criar uma interface personalizada com botões que enviam comandos seriais (como F, T, D, E, P) diretamente ao ESP32. Cada botão pode ser configurado com um rótulo e um caractere correspondente à ação desejada no robô.
-
-A conexão é feita diretamente com o módulo Bluetooth do ESP32, sem necessidade de pareamento complexo. Com isso, o controle do robô se torna intuitivo e acessível, mesmo em ambientes educacionais ou de prototipagem rápida.
-
-Configuração de um painel
-- Escolha um painel vazio e clique na opção de edição
 <figure style="text-align: center;">
-  <img src="https://github.com/user-attachments/assets/b9fe19b2-3d73-42d6-a99b-971f66002edb" alt="Robô Móvel" width="400" style="display: block; margin: 0 auto;">
+  <img src="https://github.com/user-attachments/assets/50861263-49db-4662-87bb-51c0d9d4e0a6" alt="Robô Móvel" width="300" style="display: block; margin: 0 auto;">
   <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
-    <em>Figura 3 – Tela inicial do aplicativo Bluetooth Electronics.</em>
+    <em>Figura 3 – Diagrama de ligações entre a placa microcontrala, driver de potência (módulo L298), motores DC e bateria.
+    Fonte: https://lastminuteengineers.com/esp32-pinout-reference/</em>
   </figcaption>
 </figure>
 
-- Na lista de ferramentas à direita, encontre o conjunto de ferramentas "Pads" e insira o tipo que mais lhe agradar
-<figure style="text-align: center;">
-  <img src="https://github.com/user-attachments/assets/5c36a51c-f13d-4abb-8d5b-eb24aaa89958" alt="Robô Móvel" width="400" style="display: block; margin: 0 auto;">
-  <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
-    <em>Figura 4 – Montagem de um painel com os comandos necessários.</em>
-  </figcaption>
-</figure>
+## Algoritmo de exemplo
 
-- Associe os botões direicionais aos caracteres correspondentes de movimentação do robô
-<figure style="text-align: center;">
-  <img src="https://github.com/user-attachments/assets/c4e2d2a5-b41b-482b-8e6a-026ecef7ad64" alt="Robô Móvel" width="400" style="display: block; margin: 0 auto;">
-  <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
-    <em>Figura 5 – Tela de configuração de um painel do aplicativo Bluetooth Electronics.</em>
-  </figcaption>
-</figure>
-
-- Insira um botão (encontrado no conjunto Buttons) para associar o caractere P para parar a movimentação do robô
-- Retorne à tela de seleção dos painéis e clique no botão "Connect"
-<figure style="text-align: center;">
-  <img src="https://github.com/user-attachments/assets/9df3c579-55b0-49dd-85bb-2eca010fcea9" alt="Robô Móvel" width="400" style="display: block; margin: 0 auto;">
-  <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
-    <em>Figura 6 – Iniciar a conexão com a placa microcontrolada.</em>
-  </figcaption>
-</figure>
-
-- Já com a placa microcontrolada energizada, selecione a opção "Bluetooth Classic" e logo a após clique no botão "Next"
-- Encontre e selecione na lista o nome do dispositivo assim como foi estabelecido na programação da placa ESP32
-<figure style="text-align: center;">
-  <img src="https://github.com/user-attachments/assets/125a917f-3ad7-4413-94a7-568dbc6db63d" alt="Robô Móvel" width="400" style="display: block; margin: 0 auto;">
-  <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
-    <em>Figura 7 – Indicar o nome previamente configurado da placa microcontrolada.</em>
-  </figcaption>
-</figure>
-
-- Clique em "Connect" e logo após em "Done"
-- Novamente na tela de seleção dos painéis, o botão "Run" deve estar disponível.
-
-- Divirta-se!
 
 
 ## 🛠️ Funcionamento
@@ -105,6 +64,60 @@ O ESP32 se conecta via Bluetooth a um smartphone ou computador. Comandos são en
 - `P`: parar
 
 A ponte H (módulo com L298) é utilizada para controlar o sentido de rotação dos motores, permitindo os movimentos básicos do robô.
+
+## 📱 Aplicativo de Controle: Bluetooth Electronics
+
+Para controlar o robô móvel via Bluetooth, recomenda-se o uso do aplicativo Bluetooth Electronics, disponível gratuitamente na Play Store. O aplicativo permite criar uma interface personalizada com botões que enviam comandos seriais (como F, T, D, E, P) diretamente ao ESP32. Cada botão pode ser configurado com um rótulo e um caractere correspondente à ação desejada no robô.
+
+A conexão é feita diretamente com o módulo Bluetooth do ESP32, sem necessidade de pareamento complexo. Com isso, o controle do robô se torna intuitivo e acessível, mesmo em ambientes educacionais ou de prototipagem rápida.
+
+Configuração de um painel
+- Escolha um painel vazio e clique na opção de edição
+<figure style="text-align: center;">
+  <img src="https://github.com/user-attachments/assets/b9fe19b2-3d73-42d6-a99b-971f66002edb" alt="Robô Móvel" width="400" style="display: block; margin: 0 auto;">
+  <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
+    <em>Figura 4 – Tela inicial do aplicativo Bluetooth Electronics.</em>
+  </figcaption>
+</figure>
+
+- Na lista de ferramentas à direita, encontre o conjunto de ferramentas "Pads" e insira o tipo que mais lhe agradar
+<figure style="text-align: center;">
+  <img src="https://github.com/user-attachments/assets/5c36a51c-f13d-4abb-8d5b-eb24aaa89958" alt="Robô Móvel" width="400" style="display: block; margin: 0 auto;">
+  <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
+    <em>Figura 5 – Montagem de um painel com os comandos necessários.</em>
+  </figcaption>
+</figure>
+
+- Associe os botões direicionais aos caracteres correspondentes de movimentação do robô
+<figure style="text-align: center;">
+  <img src="https://github.com/user-attachments/assets/c4e2d2a5-b41b-482b-8e6a-026ecef7ad64" alt="Robô Móvel" width="400" style="display: block; margin: 0 auto;">
+  <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
+    <em>Figura 6 – Tela de configuração de um painel do aplicativo Bluetooth Electronics.</em>
+  </figcaption>
+</figure>
+
+- Insira um botão (encontrado no conjunto Buttons) para associar o caractere P para parar a movimentação do robô
+- Retorne à tela de seleção dos painéis e clique no botão "Connect"
+<figure style="text-align: center;">
+  <img src="https://github.com/user-attachments/assets/9df3c579-55b0-49dd-85bb-2eca010fcea9" alt="Robô Móvel" width="400" style="display: block; margin: 0 auto;">
+  <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
+    <em>Figura 7 – Iniciar a conexão com a placa microcontrolada.</em>
+  </figcaption>
+</figure>
+
+- Já com a placa microcontrolada energizada, selecione a opção "Bluetooth Classic" e logo a após clique no botão "Next"
+- Encontre e selecione na lista o nome do dispositivo assim como foi estabelecido na programação da placa ESP32
+<figure style="text-align: center;">
+  <img src="https://github.com/user-attachments/assets/125a917f-3ad7-4413-94a7-568dbc6db63d" alt="Robô Móvel" width="400" style="display: block; margin: 0 auto;">
+  <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
+    <em>Figura 8 – Indicar o nome previamente configurado da placa microcontrolada.</em>
+  </figcaption>
+</figure>
+
+- Clique em "Connect" e logo após em "Done"
+- Novamente na tela de seleção dos painéis, o botão "Run" deve estar disponível.
+
+- Divirta-se!
 
 ## 📲 Como Usar
 
